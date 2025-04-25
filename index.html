@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Lucrativa - Ganhe até 50,000MT por dia</title>
+    <style>
+        :root {
+            --primary: #FF6B00;
+            --secondary: #FF8C00;
+            --dark: #1A1A1A;
+            --light: #F5F5F5;
+            --accent: #FF3D00;
+            --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #000000;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 15px;
+            
+        }
+        
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 15px 0;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--primary);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            font-weight: 500;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            background-color: #000;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-caption {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(255, 107, 0, 0.4);
+            transition: all 0.3s ease;
+            margin: 10px 0;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 107, 0, 0.6);
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+        
+        .cta-button:active {
+            transform: translateY(1px);
+        }
+        
+        .content-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+        
+        .content-box h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .steps {
+            margin-bottom: 20px;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background-color: var(--primary);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-content p {
+            margin-bottom: 5px;
+        }
+        
+        .highlight {
+            font-weight: bold;
+            color: var(--accent);
+        }
+        
+        .link-display {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        .link-display a {
+            color: #777;
+            word-break: break-all;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .testimonial {
+            flex-basis: 48%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: #AAA;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .testimonial {
+                flex-basis: 100%;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">IA<span>Lucrativa</span></a>
+            <div class="cta-button" id="headerButton">Assinar Agora</div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Sem curso, sem pagamento. Homens estão usando essa inteligência artificial para fazer até 50.000 meticais por dia.</h1>
+            <p class="subtitle">Em Moçambique, uma nova IA está gerando lucros de até 100 mil meticais em 2 dias. Veja o vídeo e entenda como.</p>
+            <div class="button-container">
+                <a href="https://media1.placard.co.mz/redirect.aspx?pid=8869&bid=1690" class="cta-button">Assinar como parceiro</a>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="content-box">
+            <div class="video-container">
+                <!-- Vídeo placeholder - substitua pelo embed real -->
+                <iframe src="Vsl.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <p class="video-caption">Assista o vídeo até o final e comece hoje a facturar com o bot!</p>
+            
+            <div class="button-container">
+                <a href="https://media1.placard.co.mz/redirect.aspx?pid=8869&bid=1690" class="cta-button">Assinar como parceiro</a>
+            </div>
+        </div>
+        
+        <div class="content-box">
+            <h2>Como activar a nova inteligência artificial</h2>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <p>Clique no botão <span class="highlight">"Assinar como Parceiro"</span></p>
+                        <p>(Mesmo que tenha conta antiga, <span class="highlight">NÃO use</span> — crie uma nova).</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <p>Crie uma nova conta do zero.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <p>Faça um depósito mínimo de <span class="highlight">500 meticais</span>.</p>
+                        <p>(Menos que isso, não ativa o sistema — política da plataforma).</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <p>Aguarde a notificação automática no topo da tela.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <p>Clique em <span class="highlight">"Assinar"</span> quando a notificação aparecer.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-container">
+                <a href="https://media1.placard.co.mz/redirect.aspx?pid=8869&bid=1690" class="cta-button">Assinar como parceiro</a>
+            </div>
+        </div>
+        
+        <div class="content-box">
+            <h2>Depoimentos de Quem Já Usa</h2>
+            
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p class="testimonial-content">"Em apenas 3 dias já recuperei meu investimento e agora estou faturando limpo!"</p>
+                    <p class="testimonial-author">- João M., Maputo</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-content">"Nunca imaginei que poderia ganhar tanto dinheiro sem sair de casa. Recomendo!"</p>
+                    <p class="testimonial-author">- Maria S., Beira</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-content">"Depois de tentar vários métodos, finalmente encontrei um que realmente funciona."</p>
+                    <p class="testimonial-author">- Carlos T., Nampula</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-content">"O sistema é tão fácil de usar que até minha mãe conseguiu configurar sozinha."</p>
+                    <p class="testimonial-author">- Ana P., Quelimane</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-box">
+            <h2>Não perca esta oportunidade!</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Junte-se a centenas de moçambicanos que já estão transformando suas vidas com esta tecnologia revolucionária.</p>
+            
+            <div class="button-container">
+                <a href="https://media1.placard.co.mz/redirect.aspx?pid=8869&bid=1690" class="cta-button">Quero Assinar Agora</a>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Termos de Uso</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Contato</a>
+                <a href="#">Perguntas Frequentes</a>
+            </div>
+            <p class="copyright">© 2025 IA Lucrativa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Efeitos para os botões CTA
+        const ctaButtons = document.querySelectorAll('.cta-button');
+        ctaButtons.forEach(button => {
+            button.addEventListener('mouseover', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            
+            button.addEventListener('mouseout', function() {
+                this.style.transform = 'scale(1)';
+            });
+            
+            button.addEventListener('click', function() {
+                console.log('CTA button clicked:', this.href);
+                // Aqui você pode adicionar tracking de cliques
+            });
+        });
+        
+        // Botão do header
+        document.getElementById('headerButton').addEventListener('click', function() {
+            window.location.href = 'https://media1.placard.co.mz/redirect.aspx?pid=8869&bid=1690';
+        });
+        
+        // Simulação de contador de pessoas
+        let userCount = 783;
+        setInterval(() => {
+            userCount += Math.floor(Math.random() * 3) + 1;
+            document.getElementById('userCount').textContent = userCount;
+        }, 5000);
+    </script>
+</body>
+</html>
